@@ -1,0 +1,7 @@
+<appwizard><introduction><name></name><author>freemvc</author><icon></icon><homepage></homepage><description><![CDATA[一个简单的php mvc 框架 用于新人学习和理解mvc之用的]]></description></introduction><platform><services><service></service><service>Mysql</service><service>kvdb</service></services><appconfig><tpl><![CDATA[
+name: <<appname>>
+version: <<version>>
+version: 1
+...
+
+]]></tpl></appconfig></platform><code><initScript>index.php</initScript></code></appwizard>

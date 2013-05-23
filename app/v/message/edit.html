@@ -1,0 +1,7 @@
+<form name="message" method="POST" action="?ctl=message&act=toAdd">
+    <input name="id" value="{$data["message_id"]}" type="hidden"/><br/>
+    <input name="data[title]" value="{$data["title"]}" size="100"/><br/>
+    <textarea name="data[content]" rows="4" cols="80">{$data["content"]}</textarea><br/>
+<input type="submit" value="提交" />
+</form>
+<a href="?ctl=message&act=index">返回列表</a>

@@ -1,0 +1,30 @@
+
+<table width="100%" align="center">
+  <tr>
+      <td>编号</td>
+      <td>标题</td>
+	  <td>内容</td>
+	  <td>时间</td>
+	  
+      <td>操作</td>
+  </tr>
+  {foreach from=$data item=item}
+  <tr>
+      <td>{$item["message_id"]}</td>
+      <td>{$item["title"]}</td>
+	  <td>{$item["content"]}</td>
+	  <td>{$item["add_time"]}</td>
+	  
+      <td>
+         <a href="?ctl=message&act=edit&id={$item["message_id"]}">修改</a>
+         <a href="?ctl=message&act=delete&id={$item["message_id"]}">删除</a>
+      </td>
+  </tr>
+  {/foreach}
+  
+    <tr>
+      <td colspan="4">{$pager}</td>
+    </tr>
+  
+</table>
+<a href="?ctl=message&act=add">添加</a>&nbsp;<a href="?ctl=passport">管理</a>
