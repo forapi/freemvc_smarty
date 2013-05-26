@@ -6,9 +6,9 @@ class Model extends Base
     var $id = 'id';
     
     function Model() {
-        include_once(LIB_DIR."MysqlDB.php");
+        include_once(LIB_DIR."MysqliDB.php");
         // 连接数据库
-        $this->db = new MysqlDB(DB_HOST,DB_USER,DB_PWD,DB_NAME);//mysqli不用写端口？？ bykang 
+        $this->db = new MysqliDB(DB_HOST,DB_USER,DB_PWD,DB_NAME);//mysqli不用写端口？？ bykang 
           
         if(empty($this->table)) die("miss table name");
     }
