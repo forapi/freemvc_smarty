@@ -10,9 +10,11 @@ class MessageController extends Controller
     function index() {
         $page = isset($_GET['page'])? intval($_GET['page']) : 1;
         $page = $page? $page : 1;
-        $pagesize = 5;
+	$pagesize = 5;
+	$where="";
+	$order="add_time DESC";
         
-        $aData = $this->_oMessage->getAll($page,$pagesize);// =>$aData  modul MessageModel.php的方法  by kang
+        $aData = $this->_oMessage->getAll($page,$pagesize,$where,$order);// =>$aData  modul MessageModel.php的方法  by kang
         
         $this->view->assign('pager',$this->page->show($page,$aData['count'],$pagesize));// =>$this->data['pager']=字符串   by kang
         $this->view->assign('data',$aData['data']);// =>$this->data['data']=$aData['data']   by kang
