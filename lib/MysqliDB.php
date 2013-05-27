@@ -1,5 +1,5 @@
 <?php
-// mysql数据库存操作类
+// mysql数据库存操作类 gittest
 class MysqliDB{
 	var $mysqli;
     function __construct($host,$user,$pwd,$dbname,$charset = 'utf8') {
